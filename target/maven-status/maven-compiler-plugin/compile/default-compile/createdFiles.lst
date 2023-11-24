@@ -1,0 +1,12 @@
+win/delin/test/DistributeAtomicUniqueIdGenerator$CurrentTimeSecondGetter.class
+win/delin/test/UserKafkaProducer$ProducerCallBack.class
+win/delin/test/MockDataFromFileToKafka.class
+win/delin/test/UserKafkaProducer.class
+win/delin/test/DistributeAtomicUniqueIdGenerator$CurrentTimeMinuteGetter.class
+win/delin/test/DistributeAtomicUniqueIdGenerator$TimestampGetter.class
+win/delin/test/DistributeAtomicUniqueIdGenerator.class
+win/delin/test/RandomPartitioner.class
+win/delin/test/DistributeAtomicUniqueIdGenerator$CurrentTimeMillisGetter.class
+win/delin/test/LoginUtil.class
+win/delin/test/LoginUtil$Module.class
+win/delin/test/DistributeAtomicUniqueIdGenerator$LazyHolder.class

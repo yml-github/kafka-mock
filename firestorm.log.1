@@ -1,0 +1,1064 @@
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-6 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-8 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-1 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-7 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-3 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-11 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-12 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-10 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-5 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-4 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more
+DEBUG kafka-producer-network-thread | producer-2 org.apache.kafka.clients.NetworkClient - Node -1 disconnected.
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Initialize connection to node -1 for sending metadata request
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Initiating connection to node -1 at 10.50.3.207:21007.
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to SEND_HANDSHAKE_REQUEST
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Creating SaslClient: client=test65@HADOOP.COM;service=kafka;serviceHostname=10.50.3.207;mechs=[GSSAPI]
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to RECEIVE_HANDSHAKE_RESPONSE
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.clients.NetworkClient - Completed connection to node -1
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.security.authenticator.SaslClientAuthenticator - Set SASL client state to INITIAL
+DEBUG kafka-producer-network-thread | producer-9 org.apache.kafka.common.network.Selector - Connection with 10.50.3.207/10.50.3.207 disconnected
+javax.security.sasl.SaslException: An error: (java.security.PrivilegedActionException: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]) occurred when evaluating SASL token received from the Kafka Broker. Kafka Client will go to AUTH_FAILED state. [Caused by javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]]
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:293)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.sendSaslToken(SaslClientAuthenticator.java:210)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.authenticate(SaslClientAuthenticator.java:178)
+	at org.apache.kafka.common.network.KafkaChannel.prepare(KafkaChannel.java:64)
+	at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:318)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:283)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:260)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:229)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:134)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.security.sasl.SaslException: GSS initiate failed [Caused by GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)]
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:211)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:275)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$2.run(SaslClientAuthenticator.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.kafka.common.security.authenticator.SaslClientAuthenticator.createSaslToken(SaslClientAuthenticator.java:273)
+	... 9 more
+Caused by: GSSException: No valid credentials provided (Mechanism level: Server not found in Kerberos database (7) - LOOKING_UP_SERVER)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:770)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:248)
+	at sun.security.jgss.GSSContextImpl.initSecContext(GSSContextImpl.java:179)
+	at com.sun.security.sasl.gsskerb.GssKrb5Client.evaluateChallenge(GssKrb5Client.java:192)
+	... 14 more
+Caused by: KrbException: Server not found in Kerberos database (7) - LOOKING_UP_SERVER
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:73)
+	at sun.security.krb5.KrbTgsReq.getReply(KrbTgsReq.java:251)
+	at sun.security.krb5.KrbTgsReq.sendAndGetCreds(KrbTgsReq.java:262)
+	at sun.security.krb5.internal.CredentialsUtil.serviceCreds(CredentialsUtil.java:308)
+	at sun.security.krb5.internal.CredentialsUtil.acquireServiceCreds(CredentialsUtil.java:126)
+	at sun.security.krb5.Credentials.acquireServiceCreds(Credentials.java:458)
+	at sun.security.jgss.krb5.Krb5Context.initSecContext(Krb5Context.java:693)
+	... 17 more
+Caused by: KrbException: Identifier doesn't match expected value (906)
+	at sun.security.krb5.internal.KDCRep.init(KDCRep.java:140)
+	at sun.security.krb5.internal.TGSRep.init(TGSRep.java:65)
+	at sun.security.krb5.internal.TGSRep.<init>(TGSRep.java:60)
+	at sun.security.krb5.KrbTgsRep.<init>(KrbTgsRep.java:55)
+	... 23 more

@@ -1,0 +1,5 @@
+/Users/yangmenglong/Develop/kafka-mock/src/main/java/win/delin/test/MockDataFromFileToKafka.java
+/Users/yangmenglong/Develop/kafka-mock/src/main/java/win/delin/test/RandomPartitioner.java
+/Users/yangmenglong/Develop/kafka-mock/src/main/java/win/delin/test/LoginUtil.java
+/Users/yangmenglong/Develop/kafka-mock/src/main/java/win/delin/test/UserKafkaProducer.java
+/Users/yangmenglong/Develop/kafka-mock/src/main/java/win/delin/test/DistributeAtomicUniqueIdGenerator.java

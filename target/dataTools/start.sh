@@ -1,0 +1,1 @@
+nohup /home/logSend/jdk1.8.0_91/bin/java -Xmx30g -jar dataTools-1.0-kerberos.jar >> console.log 2>&1 &
